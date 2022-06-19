@@ -7,8 +7,8 @@ RUN mkdir $HOME/src && \
     git clone https://github.com/gohugoio/hugo.git && \
     cd hugo && \
     go install --tags extended && \
-    curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && \
-    sudo apt-get install -y nodejs && \
+    curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get install -y nodejs && \
     npm install -g firebase
 
 # Hugo dev server port
