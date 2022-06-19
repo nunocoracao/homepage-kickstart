@@ -1,1 +1,1 @@
-# personal_homepage_starter
+# Homepage Kickstart
