@@ -43,3 +43,8 @@ Hugo
 
 ## configure deploy
 firebase stuff
+
+firebase create project
+firebase login
+firebase init
+firebase deploy
