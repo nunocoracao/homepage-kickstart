@@ -6,7 +6,10 @@ RUN mkdir $HOME/src && \
     cd $HOME/src && \
     git clone https://github.com/gohugoio/hugo.git && \
     cd hugo && \
-    go install --tags extended
+    go install --tags extended && \
+    curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && \
+    sudo apt-get install -y nodejs && \
+    npm install -g firebase
 
 # Hugo dev server port
 EXPOSE 1313
