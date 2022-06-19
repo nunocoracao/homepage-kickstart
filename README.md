@@ -1,5 +1,13 @@
 # Homepage Kickstart
 
+Install Docker
+
+Install VS Code
+
+Install VS Code Remote - Containers
+
+
+
 hugo new site . --force
 
 git submodule add -b stable https://github.com/jpanther/congo.git themes/congo
