@@ -17,3 +17,29 @@ git submodule update --remote --merge
 hugo new posts/my-first-post.md
 
 setup profile view
+
+## config.toml
+baseURL
+
+## laanguage.en.toml
+title
+description
+author stuff
+
+## params.toml
+layout to profile
+enable search
+colorscheme ocean
+showAppearanceSwitcher
+
+## articles
+add categories and tags
+explain draft tag
+
+## run 
+Hugo server -D
+Hugo server
+Hugo
+
+## configure deploy
+firebase stuff
