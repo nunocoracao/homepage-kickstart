@@ -1,7 +1,7 @@
-# Update the NODE_VERSION arg in docker-compose.yml to pick a Node version: 18, 16, 14
+# Start from golang base image
 FROM golang:1.18.3-bullseye
 
-# Download Hugo
+# Download and compile Hugo, install Node and Firebase CLI tools
 RUN mkdir $HOME/src && \
     cd $HOME/src && \
     git clone https://github.com/gohugoio/hugo.git && \
