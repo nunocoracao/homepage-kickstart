@@ -1,14 +1,10 @@
-# Start from golang base image
-FROM golang:1.18.3-bullseye
+# Start with Hugo Docker image
+FROM klakegg/hugo:0.93.2-ubuntu
 
-# Download and compile Hugo, install Node and Firebase CLI tools
-RUN mkdir $HOME/src && \
-    cd $HOME/src && \
-    git clone https://github.com/gohugoio/hugo.git && \
-    cd hugo && \
-    go install --tags extended && \
-    curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
-    cd / && apt-get install -y nodejs && npm install -g firebase-tools
+# Download Curl, Node, NPM, and Firebase
+RUN apt-get -y update && apt-get -y upgrade && \
+    apt-get install -y curl nodejs npm && \
+    npm install -g firebase-tools
 
 # Hugo dev server port
 EXPOSE 1313
